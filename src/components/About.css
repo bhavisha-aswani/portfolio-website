@@ -1,0 +1,175 @@
+.about__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.about__highlight-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.about__highlight-card--cyan {
+  border-color: rgba(6, 182, 212, 0.2);
+}
+
+.about__highlight-card--cyan:hover {
+  border-color: var(--border-cyan);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(6,182,212,0.25);
+}
+
+.about__highlight-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about__highlight-icon--purple {
+  background: var(--accent-purple-dim);
+  color: var(--accent-purple-light);
+  border: 1px solid rgba(124,58,237,0.2);
+}
+
+.about__highlight-icon--cyan {
+  background: var(--accent-cyan-dim);
+  color: var(--accent-cyan-light);
+  border: 1px solid rgba(6,182,212,0.2);
+}
+
+.about__highlight-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.about__highlight-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Bottom grid */
+.about__bottom {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about__sub-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.about__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about__summary p {
+  color: var(--text-secondary);
+  line-height: 1.85;
+  font-size: 0.95rem;
+}
+
+.about__summary strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.about__current {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.1rem;
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 10px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.about__current strong {
+  color: #10b981;
+}
+
+.about__current-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  animation: blink 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* Education */
+.about__education {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+}
+
+.about__edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about__edu-item {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.about__edu-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.about__edu-degree {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.about__edu-uni {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about__highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .about__bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__highlights {
+    grid-template-columns: 1fr;
+  }
+}

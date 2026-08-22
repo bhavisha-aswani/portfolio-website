@@ -1,0 +1,138 @@
+.contact__header {
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.contact__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 800px;
+  margin-bottom: 2.5rem;
+}
+
+.contact__card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+}
+
+.contact__card--email:hover {
+  border-color: var(--border-accent);
+}
+
+.contact__card--linkedin:hover {
+  border-color: var(--border-cyan);
+}
+
+.contact__card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact__card-icon--purple {
+  background: var(--accent-purple-dim);
+  color: var(--accent-purple-light);
+  border: 1px solid rgba(124,58,237,0.2);
+}
+
+.contact__card-icon--cyan {
+  background: var(--accent-cyan-dim);
+  color: var(--accent-cyan-light);
+  border: 1px solid rgba(6,182,212,0.2);
+}
+
+.contact__card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact__card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.contact__card-value {
+  font-size: 0.85rem;
+  color: var(--accent-cyan-light);
+  font-family: var(--font-mono);
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact__card-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.contact__card-arrow {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.contact__card:hover .contact__card-arrow {
+  color: var(--accent-purple-light);
+  transform: translateX(4px);
+}
+
+/* Meta */
+.contact__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.contact__meta-divider {
+  width: 1px;
+  height: 16px;
+  background: var(--border);
+}
+
+.contact__available-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+  animation: blink 2s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .contact__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .contact__meta-divider {
+    display: none;
+  }
+}
