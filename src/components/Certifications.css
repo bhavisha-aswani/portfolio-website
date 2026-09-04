@@ -1,0 +1,119 @@
+/* ── Certifications Section ─────────────────────────────────── */
+
+.certs__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+/* Card */
+.cert__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.25s ease;
+}
+
+.cert__card:hover {
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.1);
+}
+
+/* Top row — icon + tag */
+.cert__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cert__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cert__icon--purple {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--purple);
+}
+
+.cert__icon--cyan {
+  background: rgba(8, 145, 178, 0.1);
+  color: var(--cyan);
+}
+
+/* Title */
+.cert__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Meta — issuer · year */
+.cert__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.cert__issuer {
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.cert__dot {
+  color: var(--text-muted);
+}
+
+.cert__year {
+  color: var(--text-muted);
+}
+
+/* Description */
+.cert__desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+  flex: 1;
+}
+
+/* Link / badge */
+.cert__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cyan);
+  text-decoration: none;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  transition: color 0.2s;
+  width: fit-content;
+}
+
+.cert__link:hover {
+  color: var(--purple);
+}
+
+.cert__link--placeholder {
+  color: var(--text-muted);
+  cursor: default;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .certs__grid {
+    grid-template-columns: 1fr;
+  }
+}

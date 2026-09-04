@@ -15,7 +15,7 @@ const projects = [
       'Built and maintained the React.js admin panel for Owner.',
       'Implemented Razorpay subscription flow integration with recurring payments & webhooks.',
     ],
-    client: 'India-first SaaS · Xcellence-IT',
+    client: 'Picxly',
     url: 'https://portal.picxly.app/',
     color: 'purple',
     featured: true,
