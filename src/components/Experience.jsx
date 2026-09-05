@@ -4,12 +4,8 @@ import './Experience.css'
 
 const achievements = [
   'Delivered full-stack solutions using ASP.NET Core, C#, React.js, and SQL Server for international clients in California (USA), South Africa, and the UK',
-  'Actively participated in Agile Scrum ceremonies — sprint planning, daily stand-ups, code reviews, and retrospectives',
   'Communicated directly with global stakeholders across time zones to clarify requirements, define technical scope, and deliver project demos',
-  'Built React.js admin panel for Picxly — an AI-powered SaaS platform for photographers',
   'Integrated secure payment gateways: Razorpay (recurring subscriptions & webhooks), Adumo (JWT hosted checkout), and HolyPay donation API',
-  'Engineered third-party API integrations including Google Analytics 4 (GA4 Data API), SMS OTP, Emailable, UserJot, and Cloudflare firewall security',
-  'Built Sixtel — a .NET 9 MVC SIM purchase platform with regional plans, user dashboards, and SMTP tokenized password recovery',
   'Mentored junior developers on ASP.NET Core architecture, code quality, and maintainable software patterns',
 ]
 

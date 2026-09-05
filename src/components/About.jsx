@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { GraduationCap, Globe2, Users, Zap } from 'lucide-react'
+import { Globe2, Users, Zap } from 'lucide-react'
 import './About.css'
 
 const fadeUp = {
@@ -11,19 +11,19 @@ const highlights = [
   {
     icon: Globe2,
     title: 'International Clients',
-    desc: 'Delivered projects for clients in California (USA), South Africa, and the UK — communicating requirements, timelines, and demos directly.',
+    desc: 'Shipped projects for clients in the USA, South Africa, and the UK.',
     color: 'cyan',
   },
   {
     icon: Users,
     title: 'Agile Team Player',
-    desc: 'Actively participated in Agile Scrum ceremonies — sprint planning, daily stand-ups, code reviews, and retrospectives.',
+    desc: 'Sprint planning, stand-ups, code reviews, and retrospectives — every sprint.',
     color: 'purple',
   },
   {
     icon: Zap,
     title: 'Full-Stack Focus',
-    desc: 'Built server-side APIs with ASP.NET Core & C# and interactive client UIs with React.js. End-to-end ownership from DB schema to deployment.',
+    desc: 'End-to-end ownership — backend APIs in .NET, frontend UIs in React.',
     color: 'cyan',
   },
 ]
@@ -32,10 +32,14 @@ const education = [
   {
     degree: 'M.Sc. IT & Computer Application',
     university: 'Bhakta Kavi Narsinh Mehta University',
+    abbr: 'MSc',
+    color: 'purple',
   },
   {
     degree: 'Bachelor of Computer Application (BCA)',
     university: 'Saurashtra University',
+    abbr: 'BCA',
+    color: 'cyan',
   },
 ]
 
@@ -56,10 +60,6 @@ export default function About() {
               Building scalable solutions<br />
               <span className="gradient-text">across the full stack</span>
             </h2>
-            <p className="section-subtitle">
-              Senior .NET &amp; Full-Stack Developer with 5+ years of experience designing robust,
-              maintainable systems — from database design and high-throughput Web APIs to React-powered user interfaces.
-            </p>
           </motion.div>
 
           {/* Highlight Cards */}
@@ -75,33 +75,19 @@ export default function About() {
             ))}
           </motion.div>
 
-          {/* Core Mindset + Education */}
-          <motion.div className="about__bottom" variants={fadeUp}>
-            {/* Mindset */}
-            <div className="about__summary">
-              <h3 className="about__sub-heading">Engineering Mindset</h3>
-              <p>
-                My focus is on building clean, reliable backend architectures with <strong>ASP.NET Core</strong> &amp; <strong>C#</strong>, paired with dynamic frontends in <strong>React.js</strong>. Whether architecting secure Web APIs, managing database efficiency, or integrating third-party services, I prioritize long-term system maintainability and performance.
-              </p>
-              <p>
-                Beyond writing code, I bridge technical execution with business objectives — taking full feature ownership, driving clear communication in Agile teams, and delivering production-ready solutions for global stakeholders.
-              </p>
-            </div>
-
-            {/* Education */}
-            <div className="about__education">
-              <h3 className="about__sub-heading">
-                <GraduationCap size={18} />
-                Education
-              </h3>
-              <div className="about__edu-list">
-                {education.map(({ degree, university }) => (
-                  <div key={degree} className="about__edu-item">
+          {/* Education */}
+          <motion.div variants={fadeUp}>
+            <p className="about__edu-heading">🎓 Education</p>
+            <div className="about__edu-grid">
+              {education.map(({ degree, university, abbr, color }) => (
+                <div key={degree} className={`card about__edu-card about__edu-card--${color}`}>
+                  <div className={`about__edu-badge about__edu-badge--${color}`}>{abbr}</div>
+                  <div className="about__edu-text">
                     <div className="about__edu-degree">{degree}</div>
                     <div className="about__edu-uni">{university}</div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </motion.div>
         </motion.div>

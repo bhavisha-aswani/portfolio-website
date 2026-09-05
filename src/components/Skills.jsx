@@ -20,7 +20,7 @@ const skillGroups = [
   {
     label: 'Payments & APIs',
     color: 'cyan',
-    skills: ['Razorpay (Subscriptions & Webhooks)', 'Adumo Payment Gateway', 'HolyPay API', 'Google Analytics 4 (GA4)', 'JWT Authentication', 'SMTP / Email APIs', 'UserJot', 'Emailable API'],
+    skills: ['Razorpay (Subscriptions & Webhooks)', 'Adumo Payment Gateway', 'Google Analytics 4 (GA4)', 'JWT Authentication', 'SMTP / Email APIs', 'UserJot', 'Emailable API'],
   },
   {
     label: 'Tools & DevOps',

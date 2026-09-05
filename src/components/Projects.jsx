@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
 import './Projects.css'
 
 const projects = [
@@ -136,10 +136,16 @@ const fadeUp = {
 
 export default function Projects() {
   const [filter, setFilter] = useState('All')
+  const [showAll, setShowAll] = useState(false)
 
-  const filtered = filter === 'All'
-    ? projects
-    : projects.filter(p => p.tags.includes(filter))
+  const isFiltering = filter !== 'All'
+  const filtered = isFiltering
+    ? projects.filter(p => p.tags.includes(filter))
+    : projects
+
+  const featured  = filtered.filter(p => p.featured)
+  const extras    = filtered.filter(p => !p.featured)
+  const displayed = isFiltering ? filtered : (showAll ? filtered : featured)
 
   return (
     <section id="projects" className="section section-alt">
@@ -178,14 +184,14 @@ export default function Projects() {
           {/* Project Grid */}
           <AnimatePresence mode="wait">
             <motion.div
-              key={filter}
+              key={filter + showAll}
               className="projects__grid"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
             >
-              {filtered.map((project, i) => (
+              {displayed.map((project, i) => (
                 <motion.div
                   key={project.id}
                   className={`card project-card project-card--${project.color} ${project.featured ? 'project-card--featured' : ''}`}
@@ -207,17 +213,6 @@ export default function Projects() {
                     </div>
 
                     <p className="project-card__desc">{project.desc}</p>
-
-                    {project.highlights && project.highlights.length > 0 && (
-                      <ul className="project-card__highlights">
-                        {project.highlights.map((h, idx) => (
-                          <li key={idx} className="project-card__highlight">
-                            <span className="project-card__bullet" />
-                            {h}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
                   </div>
 
                   {/* Bottom */}
@@ -250,6 +245,28 @@ export default function Projects() {
               ))}
             </motion.div>
           </AnimatePresence>
+
+          {/* Show more / less — only when not filtering */}
+          {!isFiltering && extras.length > 0 && (
+            <motion.div
+              className="projects__show-more"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <button
+                id="projects-toggle"
+                className="projects__show-more-btn"
+                onClick={() => setShowAll(v => !v)}
+              >
+                {showAll ? (
+                  <><ChevronUp size={16} /> Show less</>
+                ) : (
+                  <><ChevronDown size={16} /> View {extras.length} more projects</>
+                )}
+              </button>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </section>

@@ -195,3 +195,32 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Show more / less button */
+.projects__show-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.projects__show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.projects__show-more-btn:hover {
+  border-color: var(--border-accent);
+  color: var(--accent-purple);
+  background: var(--accent-purple-dim);
+}
