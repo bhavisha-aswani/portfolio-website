@@ -32,7 +32,7 @@ const projects = [
       'Integrated third-party APIs for pickup stores, SMS OTP reset, Emailable validation & Cloudflare security',
     ],
     client: 'South Africa',
-    url: 'https://annique.com/',
+    url: null,
     color: 'cyan',
     featured: true,
   },
