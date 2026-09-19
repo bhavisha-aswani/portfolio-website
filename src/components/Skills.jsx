@@ -5,7 +5,7 @@ const skillGroups = [
   {
     label: 'Backend',
     color: 'purple',
-    skills: ['C#', 'ASP.NET Core', 'Web API', 'MVC', 'Entity Framework', 'LINQ', 'Web Services', '.NET 9'],
+    skills: ['C#', 'ASP.NET Core', '.NET 6/7/8/9', 'Web API', 'ASP.NET MVC', 'Entity Framework Core', 'LINQ'],
   },
   {
     label: 'Frontend',
@@ -18,6 +18,11 @@ const skillGroups = [
     skills: ['MS SQL Server', 'Stored Procedures', 'Query Optimization', 'Schema Design'],
   },
   {
+    label: 'Architecture & Patterns',
+    color: 'purple',
+    skills: ['SOLID Principles', 'Repository Pattern', 'Dependency Injection', 'Clean Architecture', 'Caching', 'Design Patterns'],
+  },
+  {
     label: 'Payments & APIs',
     color: 'cyan',
     skills: ['Razorpay (Subscriptions & Webhooks)', 'Adumo Payment Gateway', 'Google Analytics 4 (GA4)', 'JWT Authentication', 'SMTP / Email APIs', 'UserJot', 'Emailable API'],
@@ -25,7 +30,7 @@ const skillGroups = [
   {
     label: 'Tools & DevOps',
     color: 'purple',
-    skills: ['AI-Assisted Development', 'Cursor', 'Codex', 'Git', 'Azure Repos', 'SVN', 'Postman', 'Visual Studio', 'Cloudflare'],
+    skills: ['Docker', 'Git', 'GitHub Actions', 'Azure Repos', 'Postman', 'Visual Studio', 'AI-Assisted Development', 'Cloudflare'],
   },
   {
     label: 'E-Commerce Modules',

@@ -6,6 +6,8 @@ const achievements = [
   'Delivered full-stack solutions using ASP.NET Core, C#, React.js, and SQL Server for international clients in California (USA), South Africa, and the UK',
   'Communicated directly with global stakeholders across time zones to clarify requirements, define technical scope, and deliver project demos',
   'Integrated secure payment gateways: Razorpay (recurring subscriptions & webhooks), Adumo (JWT hosted checkout), and HolyPay donation API',
+  'Supported SIT, UAT, and production deployments; resolved live production issues and ensured smooth, on-time application releases',
+  'Prepared API documentation, workflow documentation, and user guides for client applications',
   'Mentored junior developers on ASP.NET Core architecture, code quality, and maintainable software patterns',
 ]
 
