@@ -3,12 +3,11 @@ import { Briefcase, CheckCircle2 } from 'lucide-react'
 import './Experience.css'
 
 const achievements = [
-  'Delivered full-stack solutions using ASP.NET Core, C#, React.js, and SQL Server for international clients in California (USA), South Africa, and the UK',
-  'Communicated directly with global stakeholders across time zones to clarify requirements, define technical scope, and deliver project demos',
-  'Integrated secure payment gateways: Razorpay (recurring subscriptions & webhooks), Adumo (JWT hosted checkout), and HolyPay donation API',
-  'Supported SIT, UAT, and production deployments; resolved live production issues and ensured smooth, on-time application releases',
-  'Prepared API documentation, workflow documentation, and user guides for client applications',
-  'Mentored junior developers on ASP.NET Core architecture, code quality, and maintainable software patterns',
+  'Sole technical lead on Annique Rooibos (SA) for 3+ years — full ownership: architecture, delivery, and international client management',
+  'Reduced server load by 20% via Cloudflare edge rules and proactive SQL Server optimisation',
+  'Designed multi-provider cloud storage (Wasabi S3 + Google Drive OAuth2) and Hangfire background automation for Picxly, a multi-tenant photography SaaS',
+  'Shipped payment and API integrations across 3 production platforms — recurring subscriptions, hosted checkout, and third-party data pipelines',
+  'Mentored junior developers on Clean Architecture and SOLID principles; owned SIT/UAT cycles through to production release',
 ]
 
 const fadeUp = {
@@ -50,12 +49,12 @@ export default function Experience() {
                     <div>
                       <h3 className="exp__role">Senior ASP.NET Developer</h3>
                       <p className="exp__company">
-                        Xcellence-IT &nbsp;·&nbsp; Surat, India
+                        Xcellence-IT &nbsp;·&nbsp; Remote, India
                       </p>
                     </div>
                   </div>
                   <div className="exp__meta">
-                    <span className="exp__duration">5 Years</span>
+                    <span className="exp__duration">Sep 2021 – Present · 5+ yrs</span>
                     <span className="tag tag-cyan" style={{ fontSize: '0.72rem' }}>Current</span>
                   </div>
                 </div>
@@ -81,7 +80,7 @@ export default function Experience() {
 
                 {/* Tech tags */}
                 <div className="exp__tech">
-                  {['ASP.NET Core', 'C#', 'React.js', 'SQL Server', 'Razorpay', 'JWT', 'REST API', 'Agile Scrum', 'Git'].map(t => (
+                  {['ASP.NET Core', 'C#', '.NET 6/7/8/9', 'React.js', 'SQL Server', 'Hangfire', 'AWS S3', 'Google Drive API', 'Razorpay', 'OAuth2', 'Git'].map(t => (
                     <span key={t} className="tag tag-neutral">{t}</span>
                   ))}
                 </div>

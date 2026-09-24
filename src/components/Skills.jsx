@@ -5,37 +5,27 @@ const skillGroups = [
   {
     label: 'Backend',
     color: 'purple',
-    skills: ['C#', 'ASP.NET Core', '.NET 6/7/8/9', 'Web API', 'ASP.NET MVC', 'Entity Framework Core', 'LINQ'],
+    skills: ['C#', 'ASP.NET Core', '.NET 6/7/8/9', 'Web API', 'ASP.NET MVC', 'Entity Framework Core', 'LINQ', 'Hangfire'],
   },
   {
-    label: 'Frontend',
+    label: 'Frontend & Database',
     color: 'cyan',
-    skills: ['React.js', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'jQuery', 'Ajax'],
-  },
-  {
-    label: 'Database',
-    color: 'purple',
-    skills: ['MS SQL Server', 'Stored Procedures', 'Query Optimization', 'Schema Design'],
+    skills: ['React.js', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'SQL Server', 'PostgreSQL', 'Query Optimization'],
   },
   {
     label: 'Architecture & Patterns',
     color: 'purple',
-    skills: ['SOLID Principles', 'Repository Pattern', 'Dependency Injection', 'Clean Architecture', 'Caching', 'Design Patterns'],
+    skills: ['SOLID Principles', 'Clean Architecture', 'Dependency Injection', 'Repository Pattern', 'Caching', 'Design Patterns'],
   },
   {
-    label: 'Payments & APIs',
+    label: 'Integrations & Cloud',
     color: 'cyan',
-    skills: ['Razorpay (Subscriptions & Webhooks)', 'Adumo Payment Gateway', 'Google Analytics 4 (GA4)', 'JWT Authentication', 'SMTP / Email APIs', 'UserJot', 'Emailable API'],
+    skills: ['Razorpay', 'AWS S3 (Wasabi)', 'Google Drive API', 'OAuth2', 'JWT', 'Google Analytics 4', 'SMTP', 'Cloudflare'],
   },
   {
-    label: 'Tools & DevOps',
+    label: 'Tools & Practices',
     color: 'purple',
-    skills: ['Docker', 'Git', 'GitHub Actions', 'Azure Repos', 'Postman', 'Visual Studio', 'AI-Assisted Development', 'Cloudflare'],
-  },
-  {
-    label: 'E-Commerce Modules',
-    color: 'neutral',
-    skills: ['NopCommerce Plugin Dev', 'Custom Checkout Flows', 'Multi-store Config', 'Payment Providers', 'Shipping Rules'],
+    skills: ['Docker', 'Git', 'GitHub Actions', 'NopCommerce', 'AI-Assisted Development', 'Agile Scrum'],
   },
 ]
 
