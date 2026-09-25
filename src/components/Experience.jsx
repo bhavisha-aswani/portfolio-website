@@ -5,9 +5,9 @@ import './Experience.css'
 const achievements = [
   'Sole technical lead on Annique Rooibos (SA) for 3+ years — full ownership: architecture, delivery, and international client management',
   'Reduced server load by 20% via Cloudflare edge rules and proactive SQL Server optimisation',
-  'Designed multi-provider cloud storage (Wasabi S3 + Google Drive OAuth2) and Hangfire background automation for Picxly, a multi-tenant photography SaaS',
+  'Developed processing dashboard using react.js for Picxly (multi-tenant photography SaaS) — surfacing FDMS service load metrics and webhook event logs tracking for platform operators',
   'Shipped payment and API integrations across 3 production platforms — recurring subscriptions, hosted checkout, and third-party data pipelines',
-  'Mentored junior developers on Clean Architecture and SOLID principles; owned SIT/UAT cycles through to production release',
+  'Mentored junior developers on Clean Architecture and SOLID principles; supported SIT/UAT testing cycles and contributed to smooth production releases',
 ]
 
 const fadeUp = {
@@ -80,7 +80,7 @@ export default function Experience() {
 
                 {/* Tech tags */}
                 <div className="exp__tech">
-                  {['ASP.NET Core', 'C#', '.NET 6/7/8/9', 'React.js', 'SQL Server', 'Hangfire', 'AWS S3', 'Google Drive API', 'Razorpay', 'OAuth2', 'Git'].map(t => (
+                  {['ASP.NET Core', 'C#', '.NET 6/7/8/9', 'React.js', 'SQL Server', 'Hangfire', 'Razorpay', 'Git'].map(t => (
                     <span key={t} className="tag tag-neutral">{t}</span>
                   ))}
                 </div>

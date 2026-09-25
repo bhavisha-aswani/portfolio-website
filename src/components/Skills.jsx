@@ -20,7 +20,7 @@ const skillGroups = [
   {
     label: 'Integrations & Cloud',
     color: 'cyan',
-    skills: ['Razorpay', 'AWS S3 (Wasabi)', 'Google Drive API', 'OAuth2', 'JWT', 'Google Analytics 4', 'SMTP', 'Cloudflare'],
+    skills: ['Razorpay', 'OAuth2', 'JWT', 'Google Analytics 4', 'SMTP', 'Cloudflare'],
   },
   {
     label: 'Tools & Practices',
